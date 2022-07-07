@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     text-align: center;
-    padding: 100px;
+    padding: 20px;
 }
 
 .questions {
@@ -18,4 +18,43 @@
     color: white;
     border-radius: 10px;
     padding: 0 40px 10px 40px;
+}
+
+.question-box span {
+    text-align: left;
+    color: palevioletred;
+}
+
+.question-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.question-button {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: palevioletred;
+    color: white;
+}
+
+.question-button:disabled {
+    background-color: lightgrey;
+    color: black;
+}
+
+.answer-display {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.answer-display.correct {
+    color: green;
+}
+
+.answer-display.wrong {
+    color: red;
 }
