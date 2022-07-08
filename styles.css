@@ -44,6 +44,16 @@
     color: black;
 }
 
+.question-button.bg-green {
+    background-color: green;
+    color: white;
+}
+
+.question-button.bg-red {
+    background-color: red;
+    color: white;
+}
+
 .answer-display {
     height: 50px;
     display: flex;

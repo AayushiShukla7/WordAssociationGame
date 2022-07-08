@@ -96,13 +96,16 @@ populateQuestions();
 function checkAnswer(questionButton, answerDisplay, option, index, correctAnswer) {
     console.log("Option: " + option + " and Index: " + index);
 
+    //Update the score
     if(index === correctAnswer) {
-        score++;        //Update the score
+        score++;        
         addResult(answerDisplay, "Correct!", 'correct');
+        questionButton.classList.add("bg-green");
     }
     else {
         score--;
         addResult(answerDisplay, "Wrong!", 'wrong');
+        questionButton.classList.add("bg-red");
     }
 
     //Display the updated score
@@ -112,7 +115,8 @@ function checkAnswer(questionButton, answerDisplay, option, index, correctAnswer
     clicked.push(option);
 
     //Disable the button if clicked
-    questionButton.disabled = clicked.includes(option);  
+    let isButtonClicked = clicked.includes(option);
+    questionButton.disabled = isButtonClicked;
 }
 
 function addResult(answerDisplay, answer, className) {
